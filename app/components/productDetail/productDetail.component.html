@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					<a href="#">Home/</a>
+				</li>
+				<li>
+					<a href="#">Library/</a>
+				</li>
+				<li class="active">
+					<a href="#">Data</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+			<img alt="140x140" src="{{fileUrl}}/{{iteminfo.filename}}" class="img-thumbnail" />
+		</div>
+		<div class="col-md-8 column productdetaillist" >
+			<div class="list-group-item">
+				itemId:{{iteminfo.id}}
+			</div>
+			<div class="list-group-item">
+				Item Name:{{iteminfo.itemname}}
+			</div>
+			<div class="list-group-item">
+				Stock Number:{{iteminfo.stocknumber}}
+			</div>
+			<div class="list-group-item">
+				Price::{{iteminfo.price}}
+			</div>
+			<div class="list-group-item">
+				Tax amount:
+			</div>
+			<div class="list-group-item">
+				<button class="btn btn-lg btn-primary btn-block" type="submit" (click)="transactionSave()">add to Cart</button>
+			</div>
+			{{transactioninfo|json}}
+		</div>
+		{{iteminfo|json}}
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column list-group-item productdescription">
+			<h2>Product description</h2>
+			{{iteminfo.description}}
+		</div>
+	</div>
+</div>
